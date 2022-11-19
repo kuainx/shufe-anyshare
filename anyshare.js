@@ -4,6 +4,7 @@
     return JSON.parse(ret)
   }
   const processDir = async ({ dirs, files }, dirname) => {
+    console.log("正在加载文件夹", dirname);
     let RET = "文件夹{" + dirname + "}下有" + files.length + "文件\n"
     for (let i = 0; i < files.length; i++) {
       RET += await getDownloadUrl(files[i])
